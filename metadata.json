@@ -1,0 +1,6 @@
+{
+  "name": "Domville - Casa de Pagode",
+  "description": "Biosite oficial da Domville Casa de Pagode. Garanta ingressos, reservas de camarotes e mesas, confira nosso cardápio digital interativo e saiba como chegar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
