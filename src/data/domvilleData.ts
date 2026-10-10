@@ -350,6 +350,133 @@ export const WEEKLY_EVENTS: EventProgram[] = [
   },
 ];
 
+export interface InstagramPost {
+  id: string;
+  imageUrl: string;
+  caption: string;
+  likes: number;
+  comments: number;
+  timeAgo: string;
+  type: 'image' | 'reel';
+  location: string;
+}
+
+export interface InstagramStory {
+  id: string;
+  title: string;
+  coverImage: string;
+  storyImage: string;
+  tagline: string;
+}
+
+export const INSTAGRAM_POSTS: InstagramPost[] = [
+  {
+    id: 'post-1',
+    imageUrl: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=900&q=80',
+    caption: 'Que energia linda Macapá! Aquele pagode que a gente não quer que acabe nunca. Sextou com casa cheia e cerveja trincando! Quem tá presente hoje comenta aí! 🥁🔥✨ #Domville #PagodeMacapá #CasaDePagode #Sextou',
+    likes: 1420,
+    comments: 87,
+    timeAgo: 'Há 2 horas',
+    type: 'image',
+    location: 'Domville - Casa de Pagode',
+  },
+  {
+    id: 'post-2',
+    imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=80',
+    caption: 'Camarotes VIP daquele jeito que vocês amam: visão privilegiada do palco, garçom exclusivo e combo no gelo! Restam poucos camarotes para este sábado. Garanta no link da bio! 🥂🍾 #CamaroteDomville #VipNight #Pagode',
+    likes: 980,
+    comments: 54,
+    timeAgo: 'Ontem',
+    type: 'image',
+    location: 'Camarotes VIP Domville',
+  },
+  {
+    id: 'post-3',
+    imageUrl: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80',
+    caption: 'Nosso Gin Tropical Sunset passando no seu feed pra avisar: o bar já tá funcionando a todo vapor! Qual o seu drink favorito da nossa nova carta? 🍹🥭🍓 #DrinksDomville #Coquetelaria #GinTropical',
+    likes: 1150,
+    comments: 42,
+    timeAgo: 'Há 1 dia',
+    type: 'image',
+    location: 'Bar & Coquetelaria Domville',
+  },
+  {
+    id: 'post-4',
+    imageUrl: 'https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?auto=format&fit=crop&w=900&q=80',
+    caption: 'Banda afinada, cavaquinho chorando e o pandeiro estalando! Aqui o pagode é de verdade e a resenha dura a noite toda. Vem viver essa vibe! 🪕🎶 #RodaDeSamba #PagodeAoVivo #MusicaBoa',
+    likes: 1680,
+    comments: 112,
+    timeAgo: 'Há 2 dias',
+    type: 'reel',
+    location: 'Palco Principal Domville',
+  },
+  {
+    id: 'post-5',
+    imageUrl: 'https://images.unsplash.com/photo-1608270116812-32b0593f668f?auto=format&fit=crop&w=900&q=80',
+    caption: 'Cerveja na temperatura que você merece: estupidamente gelada, com aquele gelo cristalino no balde! Marca os amigos que vão rachar esse balde com você hoje! 🍻❄️ #CervejaTrincando #BaldeDeCerveja #Macapá',
+    likes: 890,
+    comments: 63,
+    timeAgo: 'Há 3 dias',
+    type: 'image',
+    location: 'Domville - Casa de Pagode',
+  },
+  {
+    id: 'post-6',
+    imageUrl: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80',
+    caption: 'Aquela Picanha na Chapa com Macaxeira na Manteiga de Garrafa que é patrimônio das noites da Domville! O cardápio digital tá novinho, corre pra conferir! 🥩🧈 #PetiscosDeBoteco #ComidaDeButeco #Delicia',
+    likes: 1340,
+    comments: 79,
+    timeAgo: 'Há 4 dias',
+    type: 'image',
+    location: 'Cozinha Gourmet Domville',
+  },
+];
+
+export const INSTAGRAM_STORIES: InstagramStory[] = [
+  {
+    id: 'story-1',
+    title: 'Ao Vivo',
+    tagline: 'O pagode já começou!',
+    coverImage: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=300&q=80',
+    storyImage: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1080&q=80',
+  },
+  {
+    id: 'story-2',
+    title: 'Camarotes',
+    tagline: 'Vista exclusiva e conforto',
+    coverImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=300&q=80',
+    storyImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1080&q=80',
+  },
+  {
+    id: 'story-3',
+    title: 'Galera',
+    tagline: 'Melhor energia da cidade',
+    coverImage: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=300&q=80',
+    storyImage: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1080&q=80',
+  },
+  {
+    id: 'story-4',
+    title: 'Drinks',
+    tagline: 'Coquetéis exclusivos',
+    coverImage: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=300&q=80',
+    storyImage: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1080&q=80',
+  },
+  {
+    id: 'story-5',
+    title: 'B-Day VIP',
+    tagline: 'Comemore seu aniversário',
+    coverImage: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=300&q=80',
+    storyImage: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1080&q=80',
+  },
+];
+
+export const GUEST_LIST_BENEFITS = [
+  'Desconto especial no valor do ingresso na portaria até as 22h30',
+  'Acesso pela fila expressa e prioritária da lista amiga',
+  'Entrada VIP gratuita para o titular que trouxer 5 ou mais amigos cadastrados',
+  'Validação rápida na recepção com documento oficial com foto',
+];
+
 export const BIRTHDAY_BENEFITS = [
   {
     title: 'Entrada VIP Gratuita',
@@ -395,3 +522,5 @@ export const GALLERY_HIGHLIGHTS = [
     image: 'https://images.unsplash.com/photo-1608270116812-32b0593f668f?auto=format&fit=crop&w=800&q=80',
   },
 ];
+
+

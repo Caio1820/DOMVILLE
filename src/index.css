@@ -61,3 +61,55 @@
 .animate-float {
   animation: float-gentle 4s ease-in-out infinite;
 }
+
+/* Party Mode Light Effects */
+@keyframes laser-sweep {
+  0% {
+    transform: rotate(-35deg) scaleX(0.8);
+    opacity: 0.25;
+  }
+  50% {
+    transform: rotate(35deg) scaleX(1.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(-35deg) scaleX(0.8);
+    opacity: 0.25;
+  }
+}
+
+.animate-laser {
+  animation: laser-sweep 4s ease-in-out infinite alternate;
+}
+
+@keyframes party-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.6)) drop-shadow(0 0 35px rgba(225, 29, 72, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.7)) drop-shadow(0 0 45px rgba(245, 158, 11, 0.6));
+  }
+}
+
+.animate-party-glow {
+  animation: party-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti-piece {
+  position: fixed;
+  top: -10px;
+  pointer-events: none;
+  z-index: 45;
+  animation: confetti-fall 4s linear infinite;
+}
